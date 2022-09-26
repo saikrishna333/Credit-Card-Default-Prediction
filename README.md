@@ -12,7 +12,7 @@ The Goal is to Predict the probability of Credit default based on credit card ow
 
 ## Feedback
 
-If you have any feedback, please reach out to us at saikrishna33388@gmail.com
+If you have any feedback, please reach out to me at saikrishna33388@gmail.com
 
 ## Other Common Github Profile Sections
 👩‍💻 I'm currently working on...Machine learning, Deep Learning projects...
