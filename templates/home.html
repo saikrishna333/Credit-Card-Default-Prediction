@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Default Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        html {
+            overflow: auto;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #login-form-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-form-container">
+        <form action="classify" method="GET">
+            <div class="card" style="width: 800px">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="is-size-4 has-text-centered">Credit Card Default Prediction</div>
+                    </div>
+                    <div class="content">
+
+                        <div class="field">
+                            <p class="control">
+                                LIMIT_BAL: <input class="input" type="number" value='0' step='1' name="lb" id="lb">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                SEX: <input class="input" type="number" value='0' step='1' name="sex" id="sex">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                EDUCATION: <input class="input" type="number" value='0' step='1' name="edu" id="edu">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                MARRIAGE: <input class="input" type="number" value='0' step='1' name="mar" id="mar">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                AGE: <input class="input" type="number" value='0' step='1' name="age" id="age">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_0: <input class="input" type="number" value='0' step='1' name="p0" id="p0">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_2: <input class="input" type="number" value='0' step='1' name="p2" id="p2">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_3: <input class="input" type="number" value='0' step='1' name="p3" id="p3">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_4: <input class="input" type="number" value='0' step='1' name="p4" id="p4">
+                            </p>
+                        </div>
+
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_5: <input class="input" type="number" value='0' step='1' name="p5" id="p5">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_6: <input class="input" type="number" value='0' step='1' name="p6" id="p6">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                BILL_AMT1: <input class="input" type="number" value='0' step='1' name="b1" id="b1">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                BILL_AMT2: <input class="input" type="number" value='0' step='1' name="b2" id="b2">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                BILL_AMT3: <input class="input" type="number" value='0' step='1' name="b3" id="b3">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                BILL_AMT4: <input class="input" type="number" value='0' step='1' name="b4" id="b4">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                BILL_AMT5: <input class="input" type="number" value='0' step='1' name="b5" id="b5">
+                            </p>
+                        </div>
+
+
+
+                        <div class="field">
+                            <p class="control">
+                                BILL_AMT6: <input class="input" type="number" value='0' step='1' name="b6" id="b6">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_AMT1: <input class="input" type="number" value='0' step='1' name="pa1" id="pa1">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_AMT2: <input class="input" type="number" value='0' step='1' name="pa2" id="pa2">
+                            </p>
+                        </div>
+
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_AMT3: <input class="input" type="number" value='0' step='1' name="pa3" id="pa3">
+                            </p>
+                        </div>
+
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_AMT4: <input class="input" type="number" value='0' step='1' name="pa4" id="pa4">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_AMT5: <input class="input" type="number" value='0' step='1' name="pa5" id="pa5">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                PAY_AMT6: <input class="input" type="number" value='0' step='1' name="pa6" id="pa6">
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <button class="button is-fullwidth is-rounded is-success">Submit</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+        </div>
+</body>
+
+</html>
